@@ -36,6 +36,17 @@ display the big number as a string - uint256 is too large a number for JavaScrip
 For more Hardhate Console
 https://hardhat.org/hardhat-runner/docs/guides/hardhat-console
 
+Learn Async Functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+To run scripts/index.js file
+npx hardhat run --network localhost ./scripts/index.js
+
+
+In a real-world application, you may want to estimate the gas of your transactions, and check a gas price oracle to know the optimal values to use on every transaction.
+https://docs.ethers.org/v5/api/contract/contract/#contract-estimateGas
+
+
 
 
 ## Testing with Chai
