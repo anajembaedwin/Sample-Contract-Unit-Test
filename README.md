@@ -50,4 +50,54 @@ https://docs.ethers.org/v5/api/contract/contract/#contract-estimateGas
 
 
 ## Testing with Chai
+https://www.chaijs.com/
 npm install --save-dev chai
+
+set of principles designed for testing Solidity smart contracts
+https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide
+
+To run the test
+npx hardhat test
+
+A very good idea at this point to set up a Continuous Integration service
+to make your tests run automatically every time you commit your code to GitHub
+
+### Performing complex assertions
+Many interesting properties of contracts may be hard to capture, such as:
+
+- verifying that the contract reverts on errors
+- measuring by how much an account’s Ether balance changed
+- checking that the proper events are emitted
+
+OpenZeppelin Test Helpers is a library designed to help you test all of these properties.
+https://docs.openzeppelin.com/test-helpers/0.5/
+
+- OpenZeppelin Test Helpers is web3.js based.
+- Hardhat users should use the Truffle plugin for compatibility.
+https://hardhat.org/hardhat-runner/docs/other-guides/truffle-testing 
+- Instead using Hardhat Chai Matchers as a better supported alternative for Ethers.js.
+https://hardhat.org/hardhat-chai-matchers/docs/overview
+
+To install and use the OpenZeppelin Test Helpers, run:
+npm install --save-dev @openzeppelin/test-helpers
+
+Install web3 and the hardhat-web3 plugin:
+npm install --save-dev @nomiclabs/hardhat-web3 web3
+
+https://docs.openzeppelin.com/test-helpers/0.5/
+https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-web3#installation
+
+Testing with Web3.js & Truffle:
+npm install --save-dev @nomiclabs/hardhat-truffle5 @nomiclabs/hardhat-web3 'web3@^1.0.0-beta.36'
+https://hardhat.org/hardhat-runner/docs/other-guides/truffle-testing
+
+
+
+<!-- To install and use the hardhat-chai-matchers, run:
+or
+npm install --save-dev @nomicfoundation/hardhat-chai-matchers
+or
+yarn add --dev @nomicfoundation/hardhat-chai-matchers -->
+
+We can then update our tests to use OpenZeppelin Test Helpers for very large number support, to check for an event being emitted and to check that a transaction reverts.
+
