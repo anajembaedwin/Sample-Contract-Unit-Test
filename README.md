@@ -132,6 +132,10 @@ Install web3 and the hardhat-web3 plugin:
 npm install --save-dev @nomiclabs/hardhat-web3 web3
 ```
 
+```
+npm install --save-dev @nomiclabs/hardhat-truffle5
+```
+
 https://docs.openzeppelin.com/test-helpers/0.5/
 https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-web3#installation
 
